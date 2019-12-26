@@ -10,5 +10,5 @@ import lombok.ToString;
 public class SC {
     private int studentId;
     private int courseId;
-
+    private int grade;
 }

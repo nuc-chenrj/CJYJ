@@ -12,5 +12,5 @@ import java.util.List;
 public class Classes {
     private int classId;
     private List<Student>classStudent;
-    private List<Course>classCources;
+    private List<Course>classCourse;
 }

@@ -14,7 +14,7 @@ public class Student {
     private String studentPassword;
     private String studentName;
     private String studentClass;
-    private Email studentEmail;
+    private String studentEmail;
     private String studentTel;
     private String studentOrigin;
 

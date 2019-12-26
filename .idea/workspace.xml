@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="085cd99d-4ffd-4ab5-b4ba-60e475556f17" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/adminSelect.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/test.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Controller/LogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Controller/LogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Controller/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Controller/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Controller/TeacherController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Mapper/AdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Mapper/AdminMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Mapper/StudentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Mapper/StudentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Mapper/TeacherMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Mapper/TeacherMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/Classes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/Classes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/SC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/SC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/Teacher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Service/AdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Service/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Service/LoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Service/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Service/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Service/TeacherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/adminPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/adminPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/teacherPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/teacherPage.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Class" />
+        <option value="Interface" />
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\mvnrep" />
+        <option name="mavenHome" value="D:/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="jdkForImporter" value="11" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1V9mlkoqbFnPss7zmR1MuYoSbJb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="D:/Gitplace" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15482695" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="OPEN_URL_DIALOG">
+      <recent name="https://github.com/Lin002/CJYJ.git" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IDEA\CJYJ\src\main\resources\db" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.JavaeeApplication">
+    <configuration name="JavaeeApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CJYJ" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.group.javaee.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.group.javaee" />
+      <option name="MAIN_CLASS_NAME" value="com.group.javaee.JavaeeApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JavaeeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="CJYJ" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.group.javaee.JavaeeApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.JavaeeApplicationTests.contextLoads" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SpringMvcView">
+    <option name="showModules" value="false" />
+    <option name="showControllers" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="085cd99d-4ffd-4ab5-b4ba-60e475556f17" name="Default Changelist" comment="" />
+      <created>1576673837884</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576673837884</updated>
+      <workItem from="1576673839150" duration="3969000" />
+      <workItem from="1576714914975" duration="3625000" />
+      <workItem from="1576731474845" duration="465000" />
+      <workItem from="1576738008779" duration="1111000" />
+      <workItem from="1576739157107" duration="633000" />
+      <workItem from="1576740897453" duration="625000" />
+      <workItem from="1577003597998" duration="2607000" />
+      <workItem from="1577007104930" duration="1335000" />
+      <workItem from="1577008534001" duration="6641000" />
+      <workItem from="1577016059759" duration="3735000" />
+      <workItem from="1577020016235" duration="732000" />
+      <workItem from="1577254110339" duration="288000" />
+      <workItem from="1577254435431" duration="1984000" />
+      <workItem from="1577256520400" duration="9319000" />
+      <workItem from="1577245778475" duration="156000" />
+      <workItem from="1577274797065" duration="9268000" />
+      <workItem from="1577325922623" duration="4770000" />
+      <workItem from="1577340838768" duration="733000" />
+      <workItem from="1577342595419" duration="122000" />
+      <workItem from="1577342733783" duration="2472000" />
+      <workItem from="1577345436536" duration="4748000" />
+      <workItem from="1577350236636" duration="3646000" />
+      <workItem from="1577353944420" duration="133000" />
+      <workItem from="1577359790931" duration="151000" />
+    </task>
+    <task id="LOCAL-00001" summary="开始">
+      <created>1577255638214</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1577255638214</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="开始" />
+    <option name="LAST_COMMIT_MESSAGE" value="开始" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="449" y="144" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1577342615338">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="449" y="144" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.834@0.0.1536.834" timestamp="1577342615338" />
+    <state x="264" y="7" key="CommitChangelistDialog2" timestamp="1577360068471">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="264" y="7" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1577360068471" />
+    <state x="553" y="183" key="FileChooserDialogImpl" timestamp="1577359939296">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="553" y="183" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1577359939296" />
+    <state width="1229" height="139" key="GridCell.Tab.0.bottom" timestamp="1577353890114">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1229" height="139" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1577353890114" />
+    <state width="1229" height="139" key="GridCell.Tab.0.center" timestamp="1577353890114">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1229" height="139" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1577353890114" />
+    <state width="1229" height="139" key="GridCell.Tab.0.left" timestamp="1577353890114">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1229" height="139" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1577353890114" />
+    <state width="1229" height="139" key="GridCell.Tab.0.right" timestamp="1577353890114">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1229" height="139" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1577353890114" />
+    <state width="1229" height="139" key="GridCell.Tab.1.bottom" timestamp="1577353890114">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1229" height="139" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1577353890114" />
+    <state width="1229" height="139" key="GridCell.Tab.1.center" timestamp="1577353890114">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1229" height="139" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1577353890114" />
+    <state width="1229" height="139" key="GridCell.Tab.1.left" timestamp="1577353890114">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1229" height="139" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1577353890114" />
+    <state width="1229" height="139" key="GridCell.Tab.1.right" timestamp="1577353890114">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1229" height="139" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1577353890114" />
+    <state x="483" y="75" key="SettingsEditor" timestamp="1577351629146">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="483" y="75" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1577351629146" />
+    <state x="298" y="129" key="Vcs.Push.Dialog.v2" timestamp="1577353986625">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="298" y="129" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1577353986625" />
+    <state x="470" y="281" key="com.intellij.ide.util.TipDialog" timestamp="1577359796262">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="470" y="281" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1577359796262" />
+    <state x="417" y="265" key="git4idea.ui.GitUnstashDialog" timestamp="1577354021508">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="417" y="265" key="git4idea.ui.GitUnstashDialog/0.0.1536.834@0.0.1536.834" timestamp="1577354021508" />
+    <state x="638" y="199" key="run.anything.popup" timestamp="1577351619967">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="638" y="199" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1577351619967" />
+  </component>
+</project>

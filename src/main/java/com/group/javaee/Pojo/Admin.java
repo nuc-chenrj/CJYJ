@@ -4,14 +4,13 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.validation.constraints.Email;
-
 @Getter
 @Setter
 @ToString
 public class Admin {
     private int adminId;
     private String adminPassword;
+    private String adminName;
     private int adminTel;
-    private Email adminEmail;
+    private String adminEmail;
 }

@@ -11,12 +11,13 @@ import java.util.List;
 @Getter
 @ToString
 public class Teacher {
-    private int teachId;
-    private String teachPassword;
-    private String teachName;
+    private int teacherId;
+    private String teacherPassword;
+    private String teacherName;
 
-    private List<Classes>teachClass;
-    private List<Course>teachCources;
-    private String teachTel;
-    private Email teachEmail;
+    private List<Classes>teacherClass;
+    private List<Course>teacherCourse;
+
+    private String teacherTel;
+    private String teacherEmail;
 }

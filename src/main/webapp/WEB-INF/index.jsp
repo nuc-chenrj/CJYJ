@@ -55,7 +55,6 @@
                 <li class="active"><a href="">首页</a></li>
                 <li class=""><a href="">公示</a></li>
                 <li class=""><a href="">实施办法</a></li>
-                <li class=""><a href="">管理员/老师查询</a></li>
                 <li class=""><a href="">建议</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -63,6 +62,7 @@
                     <a href="#" data-toggle="modal" data-target="#login-modal">登录</a>
                 </li>
             </ul>
+
         </div>
     </div>
 </nav>
@@ -81,7 +81,7 @@
             <!-- Begin # DIV Form -->
             <div id="div-forms">
                 <!-- Begin # Login Form -->
-                <form class="sign-form" id="login-form" role="form" action="/Login" method="post">
+                <form class="sign-form" id="login-form" role="form" action="/login" method="post">
                     <input type='hidden' name='csrfmiddlewaretoken'
                            value='LkYIEOiULz1W5oDCFmaRRWL1fnniL0YAAPJ577ioIWitoo4zd5AL2BMCFOgUkkEj'/>
                     <div class="modal-body">
