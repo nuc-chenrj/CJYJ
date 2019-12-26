@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="085cd99d-4ffd-4ab5-b4ba-60e475556f17" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/group/javaee/Controller/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/group/javaee/Controller/StudentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Mapper/AdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Mapper/AdminMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/group/javaee/Controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/group/javaee/Controller/AdminController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +181,7 @@
       <workItem from="1577361466811" duration="691000" />
       <workItem from="1577362179602" duration="499000" />
       <workItem from="1577362772192" duration="92000" />
-      <workItem from="1577362962585" duration="83000" />
+      <workItem from="1577362962585" duration="258000" />
     </task>
     <task id="LOCAL-00001" summary="开始">
       <created>1577255638214</created>
@@ -205,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577361989770</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="测试">
+      <created>1577363056419</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1577363056419</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,18 +244,18 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="449" y="144" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.834@0.0.1536.834" timestamp="1577342615338" />
-    <state x="264" y="7" key="CommitChangelistDialog2" timestamp="1577361988331">
+    <state x="264" y="7" key="CommitChangelistDialog2" timestamp="1577363054815">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="264" y="7" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1577361988331" />
+    <state x="264" y="7" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1577363054815" />
     <state x="770" y="183" key="FileChooserDialogImpl" timestamp="1577362986504">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="770" y="183" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1577362986504" />
-    <state x="562" y="298" width="398" height="219" key="Github.ShareDialog" timestamp="1577362366047">
+    <state x="562" y="298" width="398" height="219" key="Github.ShareDialog" timestamp="1577363143323">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="562" y="298" width="398" height="219" key="Github.ShareDialog/0.0.1536.834@0.0.1536.834" timestamp="1577362366047" />
+    <state x="562" y="298" width="398" height="219" key="Github.ShareDialog/0.0.1536.834@0.0.1536.834" timestamp="1577363143323" />
     <state width="1226" height="244" key="GridCell.Tab.0.bottom" timestamp="1577362161294">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
