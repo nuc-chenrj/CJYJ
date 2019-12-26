@@ -2,29 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="085cd99d-4ffd-4ab5-b4ba-60e475556f17" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/adminSelect.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/test.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Controller/LogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Controller/LogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Controller/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Controller/TeacherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Mapper/AdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Mapper/AdminMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Mapper/StudentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Mapper/StudentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Mapper/TeacherMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Mapper/TeacherMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/Classes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/Classes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/SC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/SC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/Teacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Service/AdminService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Service/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Service/LoginService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Service/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Service/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Service/TeacherService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/adminPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/adminPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/teacherPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/teacherPage.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +40,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -103,7 +84,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15482695" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="OPEN_URL_DIALOG">
@@ -192,7 +173,11 @@
       <workItem from="1577345436536" duration="4748000" />
       <workItem from="1577350236636" duration="3646000" />
       <workItem from="1577353944420" duration="133000" />
-      <workItem from="1577359790931" duration="151000" />
+      <workItem from="1577359790931" duration="1056000" />
+      <workItem from="1577360879933" duration="33000" />
+      <workItem from="1577360951478" duration="95000" />
+      <workItem from="1577361205619" duration="226000" />
+      <workItem from="1577361466811" duration="499000" />
     </task>
     <task id="LOCAL-00001" summary="开始">
       <created>1577255638214</created>
@@ -201,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577255638214</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="开始">
+      <created>1577360098953</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1577360098953</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,14 +221,18 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="449" y="144" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.834@0.0.1536.834" timestamp="1577342615338" />
-    <state x="264" y="7" key="CommitChangelistDialog2" timestamp="1577360068471">
+    <state x="264" y="7" key="CommitChangelistDialog2" timestamp="1577360096636">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="264" y="7" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1577360068471" />
+    <state x="264" y="7" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1577360096636" />
     <state x="553" y="183" key="FileChooserDialogImpl" timestamp="1577359939296">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="553" y="183" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1577359939296" />
+    <state x="562" y="298" width="398" height="219" key="Github.ShareDialog" timestamp="1577361513015">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="562" y="298" width="398" height="219" key="Github.ShareDialog/0.0.1536.834@0.0.1536.834" timestamp="1577361513015" />
     <state width="1229" height="139" key="GridCell.Tab.0.bottom" timestamp="1577353890114">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -269,18 +265,22 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1229" height="139" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1577353890114" />
-    <state x="483" y="75" key="SettingsEditor" timestamp="1577351629146">
+    <state x="488" y="119" key="SettingsEditor" timestamp="1577360558561">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="483" y="75" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1577351629146" />
-    <state x="298" y="129" key="Vcs.Push.Dialog.v2" timestamp="1577353986625">
+    <state x="488" y="119" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1577360558561" />
+    <state x="298" y="129" key="Vcs.Push.Dialog.v2" timestamp="1577360152437">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="298" y="129" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1577353986625" />
-    <state x="470" y="281" key="com.intellij.ide.util.TipDialog" timestamp="1577359796262">
+    <state x="298" y="129" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1577360152437" />
+    <state x="470" y="281" key="com.intellij.ide.util.TipDialog" timestamp="1577361466748">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="470" y="281" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1577359796262" />
+    <state x="470" y="281" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1577361466748" />
+    <state x="562" y="334" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1577361654225">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="562" y="334" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1577361654225" />
     <state x="417" y="265" key="git4idea.ui.GitUnstashDialog" timestamp="1577354021508">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
