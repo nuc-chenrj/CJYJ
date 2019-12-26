@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="085cd99d-4ffd-4ab5-b4ba-60e475556f17" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Controller/AdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Service/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Service/LoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/group/javaee/Controller/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/group/javaee/Controller/StudentController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +76,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="D:/Gitplace" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -84,7 +86,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15482695" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="OPEN_URL_DIALOG">
@@ -177,7 +179,10 @@
       <workItem from="1577360879933" duration="33000" />
       <workItem from="1577360951478" duration="95000" />
       <workItem from="1577361205619" duration="226000" />
-      <workItem from="1577361466811" duration="499000" />
+      <workItem from="1577361466811" duration="691000" />
+      <workItem from="1577362179602" duration="499000" />
+      <workItem from="1577362772192" duration="92000" />
+      <workItem from="1577362962585" duration="83000" />
     </task>
     <task id="LOCAL-00001" summary="开始">
       <created>1577255638214</created>
@@ -193,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577360098953</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="测试">
+      <created>1577361989770</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1577361989770</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,74 +225,87 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="D:/Gitplace" />
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
     <MESSAGE value="开始" />
-    <option name="LAST_COMMIT_MESSAGE" value="开始" />
+    <MESSAGE value="测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试" />
   </component>
   <component name="WindowStateProjectService">
     <state x="449" y="144" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1577342615338">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="449" y="144" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.834@0.0.1536.834" timestamp="1577342615338" />
-    <state x="264" y="7" key="CommitChangelistDialog2" timestamp="1577360096636">
+    <state x="264" y="7" key="CommitChangelistDialog2" timestamp="1577361988331">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="264" y="7" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1577360096636" />
-    <state x="553" y="183" key="FileChooserDialogImpl" timestamp="1577359939296">
+    <state x="264" y="7" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1577361988331" />
+    <state x="770" y="183" key="FileChooserDialogImpl" timestamp="1577362986504">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="553" y="183" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1577359939296" />
-    <state x="562" y="298" width="398" height="219" key="Github.ShareDialog" timestamp="1577361513015">
+    <state x="770" y="183" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1577362986504" />
+    <state x="562" y="298" width="398" height="219" key="Github.ShareDialog" timestamp="1577362366047">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="562" y="298" width="398" height="219" key="Github.ShareDialog/0.0.1536.834@0.0.1536.834" timestamp="1577361513015" />
-    <state width="1229" height="139" key="GridCell.Tab.0.bottom" timestamp="1577353890114">
+    <state x="562" y="298" width="398" height="219" key="Github.ShareDialog/0.0.1536.834@0.0.1536.834" timestamp="1577362366047" />
+    <state width="1226" height="244" key="GridCell.Tab.0.bottom" timestamp="1577362161294">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1229" height="139" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1577353890114" />
-    <state width="1229" height="139" key="GridCell.Tab.0.center" timestamp="1577353890114">
+    <state width="1226" height="244" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1577362161294" />
+    <state width="1226" height="244" key="GridCell.Tab.0.center" timestamp="1577362161294">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1229" height="139" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1577353890114" />
-    <state width="1229" height="139" key="GridCell.Tab.0.left" timestamp="1577353890114">
+    <state width="1226" height="244" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1577362161294" />
+    <state width="1226" height="244" key="GridCell.Tab.0.left" timestamp="1577362161294">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1229" height="139" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1577353890114" />
-    <state width="1229" height="139" key="GridCell.Tab.0.right" timestamp="1577353890114">
+    <state width="1226" height="244" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1577362161294" />
+    <state width="1226" height="244" key="GridCell.Tab.0.right" timestamp="1577362161294">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1229" height="139" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1577353890114" />
-    <state width="1229" height="139" key="GridCell.Tab.1.bottom" timestamp="1577353890114">
+    <state width="1226" height="244" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1577362161294" />
+    <state width="1226" height="244" key="GridCell.Tab.1.bottom" timestamp="1577362161294">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1229" height="139" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1577353890114" />
-    <state width="1229" height="139" key="GridCell.Tab.1.center" timestamp="1577353890114">
+    <state width="1226" height="244" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1577362161294" />
+    <state width="1226" height="244" key="GridCell.Tab.1.center" timestamp="1577362161294">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1229" height="139" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1577353890114" />
-    <state width="1229" height="139" key="GridCell.Tab.1.left" timestamp="1577353890114">
+    <state width="1226" height="244" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1577362161294" />
+    <state width="1226" height="244" key="GridCell.Tab.1.left" timestamp="1577362161294">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1229" height="139" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1577353890114" />
-    <state width="1229" height="139" key="GridCell.Tab.1.right" timestamp="1577353890114">
+    <state width="1226" height="244" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1577362161294" />
+    <state width="1226" height="244" key="GridCell.Tab.1.right" timestamp="1577362161294">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1229" height="139" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1577353890114" />
-    <state x="488" y="119" key="SettingsEditor" timestamp="1577360558561">
+    <state width="1226" height="244" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1577362161294" />
+    <state x="420" y="119" key="SettingsEditor" timestamp="1577362678571">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="488" y="119" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1577360558561" />
-    <state x="298" y="129" key="Vcs.Push.Dialog.v2" timestamp="1577360152437">
+    <state x="420" y="119" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1577362678571" />
+    <state x="298" y="129" key="Vcs.Push.Dialog.v2" timestamp="1577361992277">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="298" y="129" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1577360152437" />
-    <state x="470" y="281" key="com.intellij.ide.util.TipDialog" timestamp="1577361466748">
+    <state x="298" y="129" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1577361992277" />
+    <state x="470" y="281" key="com.intellij.ide.util.TipDialog" timestamp="1577362965710">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="470" y="281" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1577361466748" />
+    <state x="470" y="281" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1577362965710" />
     <state x="562" y="334" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1577361654225">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="562" y="334" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1577361654225" />
+    <state x="555" y="208" key="git4idea.merge.GitMergeDialog" timestamp="1577362254123">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="555" y="208" key="git4idea.merge.GitMergeDialog/0.0.1536.834@0.0.1536.834" timestamp="1577362254123" />
+    <state x="578" y="311" key="git4idea.ui.GitResetDialog" timestamp="1577362230832">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="578" y="311" key="git4idea.ui.GitResetDialog/0.0.1536.834@0.0.1536.834" timestamp="1577362230832" />
     <state x="417" y="265" key="git4idea.ui.GitUnstashDialog" timestamp="1577354021508">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

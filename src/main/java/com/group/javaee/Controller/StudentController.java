@@ -1,7 +1,6 @@
 package com.group.javaee.Controller;
 
 import com.group.javaee.Mapper.StudentMapper;
-import com.group.javaee.Pojo.Admin;
 import com.group.javaee.Pojo.Student;
 import com.group.javaee.Service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
