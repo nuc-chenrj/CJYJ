@@ -6,45 +6,40 @@
     <meta charset="utf-8" />
     <title></title>
     <script src="./js/jquery.min.js"></script>
-    <script>
-        window.onload = function(){
-            //动态的往select里面添加option(JS方式添加)
-            var select = document.createElement("select");
-            select.setAttribute('id','sc');
-            select.setAttribute('onchange','change()');
-            document.body.appendChild(select);
-            for(var n = 1;n<10;n++){
-                select.options.add(new Option('添加option'+n,n+""));
-            }
-
-            //Jquery动态添加option
-            for(var m = 1;m<10;m++){
-                $('#selectid').append("<option value="+m+">option"+m+"</option>");
-            }
-            change();
-        }
-
-        function change(){
-            //js方式获取当前选中项
-            //拿到select的对象
-            var sel1 = document.getElementById('selectid');
-            //获取当前选中项的索引
-            var index = sel1.selectedIndex;
-            //拿到选中的option的value
-            console.log(sel1.options[index].value);
-            //拿到选中的option的text
-            console.log(sel1.options[index].text);
-
-            //Jquery方式获取当前选中项
-            var sel2 = $('#selectid option:selected');
-            //拿到选中的option的value
-            console.log(sel2.val());
-            //拿到选中的option的text
-            console.log(sel2.text());
-        }
-    </script>
 </head>
 <body>
-<select id='selectid' οnchange="change()"  ></select>
+<form action="SearchBookServlet" method="post">
+    <input type='hidden' name='csrfmiddlewaretoken' value='LkYIEOiULz1W5oDCFmaRRWL1fnniL0YAAPJ577ioIWitoo4zd5AL2BMCFOgUkkEj' />
+    <div>
+        <div>
+            <div class="glyphicon glyphicon-chevron-right"></div>
+            <span >检索</span>
+        </div>
+
+        <div style="display: inline">
+            <label style="vertical-align: top">检阅途径：</label>
+            <select name="searchway" style="width:100px;height: 20px;overflow: hidden;" >
+                <%
+                    int n=3;
+                    while(n--!=0){
+                %>
+                <tr>
+                    <td><option value="<%=1+1%>" selected="selected" ></option></td>
+                </tr>
+
+                <%
+                    }
+                %>
+            </select>
+
+        </div>
+        <div style="display: inline; vertical-align: bottom">
+            <label>检索词：</label>
+            <input name="searchname" style="width: 130px;height: 20px; vertical-align: top" type="tex" size="30">
+            <input type="submit" style="width:50px;height: 20px; line-height: 20px;padding: 0;margin: 0" value="检索"/>
+        </div>
+    </div>
+</form>
+
 </body>
 </html>

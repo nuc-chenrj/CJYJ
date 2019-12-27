@@ -8,9 +8,10 @@ import lombok.ToString;
 @Setter
 @ToString
 public class Admin {
-    private int adminId;
+    private Integer adminId;
     private String adminPassword;
     private String adminName;
-    private int adminTel;
+    private Integer adminTel;
     private String adminEmail;
+
 }

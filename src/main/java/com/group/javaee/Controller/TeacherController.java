@@ -1,6 +1,7 @@
 package com.group.javaee.Controller;
 
 
+import com.fasterxml.jackson.databind.DatabindContext;
 import com.group.javaee.Mapper.TeacherMapper;
 import com.group.javaee.Pojo.Admin;
 import com.group.javaee.Pojo.Teacher;
@@ -17,6 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 @Controller
 public class TeacherController {
@@ -74,7 +76,6 @@ public class TeacherController {
     }
     */
 
-
     @RequestMapping(value = "/searchAdmin", method = RequestMethod.POST)
     protected void searchAdmin(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html;charset=utf-8");
@@ -96,6 +97,7 @@ public class TeacherController {
             e.printStackTrace();
         }
     }
+    
 
 
 }

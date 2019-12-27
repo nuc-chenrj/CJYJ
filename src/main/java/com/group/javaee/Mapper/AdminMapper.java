@@ -15,6 +15,7 @@ public interface AdminMapper {
     @Update("update admin set adminPassword=#{adminPassword},adminTel=#{adminTel},adminEmail=#{adminEmail} where adminId=#{adminId}")
     boolean updateAdmin(Admin admin);
 
+
 /*    @Insert("insert into teacher(teacherId,teacherName,teacherEmail,teacherTel) VALUES(#{teacherId},#{teacherName},#{teacherEmail},#{teacherTel})")
     String InsertTeacher(Teacher teacher);*/
 

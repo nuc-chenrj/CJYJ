@@ -4,20 +4,17 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.validation.constraints.Email;
 
 @Getter
 @Setter
 @ToString
 public class Student {
-    private int studentId;
+    private Integer studentId;
     private String studentPassword;
     private String studentName;
-    private String studentClass;
+    private Integer studentClassId;/*ID*/
     private String studentEmail;
     private String studentTel;
     private String studentOrigin;
 
-
-    //成绩
 }

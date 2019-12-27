@@ -19,6 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 @Controller
 public class AdminController {
@@ -79,5 +80,11 @@ public class AdminController {
         return teacher;
     }
 */
+
+    @RequestMapping("test")
+    @ResponseBody
+    List<Integer> test(int id){
+        return teacherMapper.selectClassId(id);
+    }
 
 }

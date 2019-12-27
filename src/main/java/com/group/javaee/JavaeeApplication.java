@@ -10,4 +10,5 @@ public class JavaeeApplication {
         SpringApplication.run(JavaeeApplication.class, args);
     }
 
+
 }

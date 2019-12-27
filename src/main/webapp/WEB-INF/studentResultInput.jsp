@@ -1,4 +1,8 @@
-<%--
+<%@ page import="java.util.List" %>
+<%@ page import="javax.validation.constraints.AssertFalse" %>
+<%@ page import="org.springframework.beans.factory.annotation.Autowired" %>
+<%@ page import="com.group.javaee.Mapper.AdminMapper" %>
+<%@ page import="com.group.javaee.Mapper.TeacherMapper" %><%--
   Created by IntelliJ IDEA.
   User: wan14
   Date: 2019/12/22
@@ -128,6 +132,13 @@
     </div>
 </div>
 
+<%
+
+
+%>
+
+
+
 <form action="SearchBookServlet" method="post">
     <input type='hidden' name='csrfmiddlewaretoken' value='LkYIEOiULz1W5oDCFmaRRWL1fnniL0YAAPJ577ioIWitoo4zd5AL2BMCFOgUkkEj' />
     <div>
@@ -135,17 +146,19 @@
             <div class="glyphicon glyphicon-chevron-right"></div>
             <span>检索</span>
         </div>
-
         <div style="display: inline">
             <label style="vertical-align: top">检阅途径：</label>
 
             <select name="searchway" style="width: 130px;height: 20px; vertical-align: top">
-                <option value="" selected="selected">任意词</option>
+
                 <option value="ISBN">ISBN</option>
                 <option value="name">书籍名称</option>
                 <option value="author">作者</option>
                 <option value="publisher">出版社</option>
                 <option value="classify">分类</option>
+
+
+
             </select>
 
         </div>
@@ -156,6 +169,7 @@
         </div>
     </div>
 </form>
+
 
 <div class="row center-banner">
     <div class="col-xs-12 center-banner-title">

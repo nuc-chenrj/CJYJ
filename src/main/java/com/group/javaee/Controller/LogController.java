@@ -96,10 +96,13 @@ public class LogController {
             response.setHeader("refresh","1;URL=index");
         }
     }
+
     @RequestMapping("/logout")
     public void logout(HttpServletRequest request, HttpServletResponse response) {
         request.getSession().invalidate();
         response.setHeader("refresh","1;URL=index");
     }
+
+
 
 }

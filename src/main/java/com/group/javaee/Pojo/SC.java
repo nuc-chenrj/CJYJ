@@ -8,7 +8,9 @@ import lombok.ToString;
 @Getter
 @ToString
 public class SC {
-    private int studentId;
-    private int courseId;
-    private int grade;
+    private Integer studentId;
+    private Integer courseId;
+    private Integer teacherId;
+    private Integer grade;
+
 }

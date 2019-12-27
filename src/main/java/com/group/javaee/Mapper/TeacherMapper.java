@@ -7,6 +7,8 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
+import java.util.List;
+
 @Mapper
 public interface TeacherMapper {
 
@@ -18,4 +20,10 @@ public interface TeacherMapper {
 
     @Select("select * from admin where ${searchWay}=#{searchName}")
     Admin selectAdmin(String searchWay, String searchName);
+
+/*    @Select("select * from admin where teacherId=#{id}")
+    Admin selectAdminById(int id);*/
+
+    @Select("select student.studentClassId from student,sc,teacher where student.studentId=sc.studentId and sc.teacherId=teacher.teacherId and teacher.teacherId=#{id}")
+    List<Integer> selectClassId(Integer id);
 }

@@ -1,3 +1,7 @@
+<%@ page import="com.group.javaee.Mapper.TeacherMapper" %>
+<%@ page import="java.util.List" %>
+<%@ page import="org.springframework.beans.factory.annotation.Autowired" %>
+
 <%--
   Created by IntelliJ IDEA.
   User: wan14
@@ -60,7 +64,7 @@
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="studentResultInput">成绩录入</a></li>
+                        <li><a href="/gradeResultInput">成绩录入</a></li>
                         <li><a href="#" data-toggle="modal" data-target="#borrow-modal">成绩查询</a></li>
                     </ul>
                 </li>
@@ -128,7 +132,6 @@
 </div>
 
 
-
 <div class="row center-banner">
     <div class="col-xs-12 center-banner-title">
     </div>
@@ -136,4 +139,17 @@
 <script src="https://cdn.acwing.com/static/web/js/status/click.js"></script>
 </body>
 </html>
+
+
+<%
+    TeacherMapper teacherMapper = null;
+    System.out.println(session.getAttribute("license"));
+    Integer license= Integer.parseInt((String) session.getAttribute("license"));
+    System.out.println(license);
+
+    List<Integer> list= teacherMapper.selectClassId(20190001);
+
+    if(list.isEmpty())System.out.println("kong");
+    else System.out.println("不为空");
+%>
 

@@ -10,7 +10,11 @@ import java.util.List;
 @Setter
 @ToString
 public class Classes {
-    private int classId;
+    private Integer classId;
+
     private List<Student>classStudent;
     private List<Course>classCourse;
+    private List<Teacher>classTeacher;
+
+
 }

@@ -9,8 +9,7 @@ import lombok.ToString;
 @Setter
 @ToString
 public class Course {
-    private int courseId;
+    private Integer courseId;
     private String courseName;
     private String method;
-
 }
