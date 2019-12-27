@@ -53,8 +53,7 @@
         <div class="collapse navbar-collapse" id="topNavBar">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="">首页</a></li>
-                <li class=""><a href="">课表查询</a></li>
-                <li class=""><a href="">教师查询</a></li>
+                <li class=""><a href="teacherSelect">教师查询</a></li>
                 <li class=""><a href="">成绩详情</a></li>
                 <li><a href="#" data-toggle="modal" data-target="#update-modal">查看/修改个人信息</a></li>
             </ul>

@@ -2,8 +2,10 @@ package com.group.javaee.Controller;
 
 
 import com.group.javaee.Mapper.AdminMapper;
+import com.group.javaee.Mapper.StudentMapper;
 import com.group.javaee.Mapper.TeacherMapper;
 import com.group.javaee.Pojo.Admin;
+import com.group.javaee.Pojo.Teacher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,6 +26,8 @@ public class AdminController {
     AdminMapper adminMapper;
     @Autowired(required = false)
     TeacherMapper teacherMapper;
+    @Autowired(required = false)
+    StudentMapper studentMapper;
 
     @RequestMapping(value = "/{X}")
     public String dir(@PathVariable String X, Model model) {
@@ -58,14 +62,22 @@ public class AdminController {
         }
     }
 
-    @RequestMapping("test")
+/*    @RequestMapping("test")
     @ResponseBody
     Admin test(String searchWay,String searchName){
         Admin admin=teacherMapper.selectAdmin(searchWay,searchName);
         return admin;
-    }
-
+    }*/
 
     /*测试*/
+
+/*
+    @RequestMapping("test")
+    @ResponseBody
+    Teacher test(String searchWay,String searchName){
+        Teacher teacher= studentMapper.selectTeacher(searchWay,searchName);
+        return teacher;
+    }
+*/
 
 }

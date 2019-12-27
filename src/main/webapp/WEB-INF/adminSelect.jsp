@@ -1,3 +1,4 @@
+
 <%@ page import="com.group.javaee.Pojo.Admin" %>
 
 <%--
@@ -8,6 +9,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -130,7 +132,21 @@
     </div>
 </div>
 
+<%
+    Admin admin = (Admin) request.getAttribute("admin");
 
+    if(admin!=null){
+        System.out.println("yes");
+        System.out.println(admin.getAdminId());
+        System.out.println(admin.getAdminName());
+        System.out.println(admin.getAdminEmail());
+    }
+    else {
+        System.out.println("no");
+        /*System.out.println(teacher.toString());*/
+    }
+
+%>
 <form action="/searchAdmin" method="post">
     <input type='hidden' name='csrfmiddlewaretoken'
            value='LkYIEOiULz1W5oDCFmaRRWL1fnniL0YAAPJ577ioIWitoo4zd5AL2BMCFOgUkkEj'/>
@@ -158,37 +174,32 @@
 </form>
 
 
-<%
-    request.setCharacterEncoding("utf-8");
-    Admin adm = (Admin) request.getAttribute("admin");
-/*    System.out.println(adm.getAdminName());
-    System.out.println(adm.toString());*/
-%>
 
-<table border="1" align="center" style="width: 100%">
+<%--<table border="1" align="center" style="width: 100%">
+
     <%
         try {
-            if (adm .getAdminId()!=0) {
+            if (admin.getAdminId()!=0) {
     %>
     <tr>
         <td>
             <div class="row">
                 <div class="col-md-4">
-                    学工号: <b><%=adm.getAdminId()%>
+                    学工号: <b><%=admin.getAdminId()%>
                 </b>
                 </div>
                 <div class="col-md-6">
-                    姓名: <b><%=adm.getAdminName()%>
+                    姓名: <b><%=admin.getAdminName()%>
                 </b>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-4">
-                    邮箱: <b><%=adm.getAdminEmail()%>
+                    邮箱: <b><%=admin.getAdminEmail()%>
                 </b>
                 </div>
                 <div class="col-md-4">
-                    电话: <b><%=adm.getAdminTel()%>
+                    电话: <b><%=admin.getAdminTel()%>
                 </b>
                 </div>
             </div>
@@ -202,7 +213,7 @@
             e.printStackTrace();
         }
     %>
-</table>
+</table>--%>
 
 
 <div class="row center-banner">
@@ -212,3 +223,4 @@
 <script src="https://cdn.acwing.com/static/web/js/status/click.js"></script>
 </body>
 </html>
+

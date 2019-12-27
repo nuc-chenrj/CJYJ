@@ -49,31 +49,53 @@ public class TeacherController {
     public void resultInput(){
         System.out.println(123);
     }
+/*
+    @RequestMapping(value = "/searchAdmin", method = RequestMethod.POST)
+    protected void searchAdmin(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        response.setContentType("text/html;charset=utf-8");
+        request.setCharacterEncoding("utf-8");
+        try{
+            String searchway=request.getParameter("searchWay");
+            String searchname=request.getParameter("searchName");
+
+            System.out.println(searchway);
+            System.out.println(searchname);
+            Admin admin = teacherMapper.selectAdmin(searchway,searchname);
+
+            request.setAttribute("admin", admin);
+
+            *//*System.out.println(admin.toString());*//*
+
+            request.getRequestDispatcher("/adminSelect").forward(request,response);
+
+        }catch (Exception e ){
+            e.printStackTrace();
+        }
+    }
+    */
+
 
     @RequestMapping(value = "/searchAdmin", method = RequestMethod.POST)
     protected void searchAdmin(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html;charset=utf-8");
         request.setCharacterEncoding("utf-8");
-
         try{
             String searchway=request.getParameter("searchWay");
             String searchname=request.getParameter("searchName");
 
-/*            System.out.println(searchway);
-            System.out.println(searchname);*/
+            System.out.println(searchway);
+            System.out.println(searchname);
 
             Admin admin = teacherMapper.selectAdmin(searchway,searchname);
-
-/*            System.out.println(admin.getAdminId());
-            System.out.println(admin.getAdminPassword());
-            System.out.println(admin.getAdminEmail());*/
-
             request.setAttribute("admin", admin);
-            System.out.println(admin.toString());
+
+            /*System.out.println(teacher.toString());*/
 
             request.getRequestDispatcher("/adminSelect").forward(request,response);
         }catch (Exception e ){
             e.printStackTrace();
         }
     }
+
+
 }

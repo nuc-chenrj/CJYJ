@@ -1,7 +1,9 @@
 package com.group.javaee.Controller;
 
 import com.group.javaee.Mapper.StudentMapper;
+import com.group.javaee.Pojo.Admin;
 import com.group.javaee.Pojo.Student;
+import com.group.javaee.Pojo.Teacher;
 import com.group.javaee.Service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,6 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 
 @Controller
@@ -50,9 +53,29 @@ public class StudentController {
             out.println("<script> alert(\"修改失败!\"); </script>");
             response.setHeader("refresh", "1;URL=studentPage");
         }
-        System.out.println(123);
     }
 
+    @RequestMapping(value = "/searchTeacher", method = RequestMethod.POST)
+    protected void searchAdmin(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        response.setContentType("text/html;charset=utf-8");
+        request.setCharacterEncoding("utf-8");
+        try{
+            String searchway=request.getParameter("searchWay");
+            String searchname=request.getParameter("searchName");
+
+            System.out.println(searchway);
+            System.out.println(searchname);
+
+            Teacher teacher = studentMapper.selectTeacher(searchway,searchname);
+            request.setAttribute("teacher", teacher);
+
+            /*System.out.println(teacher.toString());*/
+
+            request.getRequestDispatcher("/teacherSelect").forward(request,response);
+        }catch (Exception e ){
+            e.printStackTrace();
+        }
+    }
 
 
 

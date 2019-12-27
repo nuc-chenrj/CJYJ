@@ -57,7 +57,6 @@ public class LogController {
                 out.println("<script> alert(\"证件或密码错误!\"); </script>");
                 response.setHeader("refresh","1;URL=index");
             }
-
         }
         else if(request.getParameter("license").length()==8){
             Teacher teacher=new Teacher();
@@ -74,7 +73,6 @@ public class LogController {
                 out.println("<script> alert(\"证件或密码错误!\"); </script>");
                 response.setHeader("refresh","1;URL=index");
             }
-
         }
         else if(request.getParameter("license").length()==9){
             Student student=new Student();

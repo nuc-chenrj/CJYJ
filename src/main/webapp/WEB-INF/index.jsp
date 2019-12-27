@@ -1,4 +1,5 @@
-<%@ page import="java.io.PrintWriter" %><%--
+<%@ page import="java.io.PrintWriter" %>
+<%@ page import="com.group.javaee.Pojo.Admin" %><%--
   Created by IntelliJ IDEA.
   User: wan14
   Date: 2019/12/22
@@ -115,7 +116,8 @@
 </body>
 </html>
 
-<%
-    PrintWriter o = response.getWriter();
-%>
+<%--<%
+    Admin admin = (Admin) request.getAttribute("admin");
+    System.out.println(admin.toString());
+%>--%>
 
