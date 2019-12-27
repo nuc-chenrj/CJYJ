@@ -3,6 +3,7 @@ package com.group.javaee.Pojo;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+
 import java.util.List;
 
 @Setter
@@ -13,9 +14,9 @@ public class Teacher {
     private String teacherPassword;
     private String teacherName;
 
-    private List<Integer>teacherClassId;
+    private List<Integer> teacherClassId;
 
-    private List<Course>teacherCourse;
+    private List<Course> teacherCourse;
 
     private String teacherTel;
     private String teacherEmail;

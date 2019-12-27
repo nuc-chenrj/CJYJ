@@ -12,4 +12,5 @@ public class Course {
     private Integer courseId;
     private String courseName;
     private String method;
+
 }

@@ -1,6 +1,9 @@
 <%@ page import="com.group.javaee.Mapper.TeacherMapper" %>
 <%@ page import="java.util.List" %>
 <%@ page import="org.springframework.beans.factory.annotation.Autowired" %>
+<%@ page import="org.springframework.web.context.support.WebApplicationContextUtils" %>
+<%@ page import="org.springframework.context.ApplicationContext" %>
+<%@ page import="com.group.javaee.Mapper.AdminMapper" %>
 
 <%--
   Created by IntelliJ IDEA.
@@ -64,7 +67,7 @@
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="/gradeResultInput">成绩录入</a></li>
+                        <li><a href="studentResultInput">成绩录入</a></li>
                         <li><a href="#" data-toggle="modal" data-target="#borrow-modal">成绩查询</a></li>
                     </ul>
                 </li>
@@ -141,15 +144,13 @@
 </html>
 
 
+<%--
 <%
-    TeacherMapper teacherMapper = null;
-    System.out.println(session.getAttribute("license"));
     Integer license= Integer.parseInt((String) session.getAttribute("license"));
-    System.out.println(license);
-
-    List<Integer> list= teacherMapper.selectClassId(20190001);
-
-    if(list.isEmpty())System.out.println("kong");
-    else System.out.println("不为空");
+    ServletContext sc = this.getServletConfig().getServletContext();
+    ApplicationContext ac = WebApplicationContextUtils.getWebApplicationContext(sc);
+    TeacherMapper teacherMapper = (TeacherMapper) ac.getBean("teacherMapper");
+    System.out.println(teacherMapper.selectClassId(license));
 %>
+--%>
 

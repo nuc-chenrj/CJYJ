@@ -20,6 +20,7 @@ import javax.validation.Valid;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
+import java.util.Set;
 
 @Controller
 public class AdminController {
@@ -49,17 +50,16 @@ public class AdminController {
         PrintWriter out = response.getWriter();
 
         model.addAttribute("admin", admin);
-        String license=request.getSession().getAttribute("license").toString().trim();
+        String license = request.getSession().getAttribute("license").toString().trim();
         admin.setAdminId(Integer.parseInt(license));
         System.out.println(admin.toString());
         boolean ok = adminMapper.updateAdmin(admin);
         if (ok) {
             out.println("<script> alert(\"修改成功!\"); </script>");
-            response.setHeader("refresh","1;URL=adminPage");
-        }
-        else {
+            response.setHeader("refresh", "1;URL=adminPage");
+        } else {
             out.println("<script> alert(\"修改失败!\"); </script>");
-            response.setHeader("refresh","1;URL=adminPage");
+            response.setHeader("refresh", "1;URL=adminPage");
         }
     }
 
@@ -70,8 +70,6 @@ public class AdminController {
         return admin;
     }*/
 
-    /*测试*/
-
 /*
     @RequestMapping("test")
     @ResponseBody
@@ -81,10 +79,23 @@ public class AdminController {
     }
 */
 
-    @RequestMapping("test")
+/*    @RequestMapping("test")
     @ResponseBody
-    List<Integer> test(int id){
+    List<Integer> test(int id) {
         return teacherMapper.selectClassId(id);
-    }
+    }*/
+
+/*    @RequestMapping("test")
+    @ResponseBody
+    Set<String> test(int id) {
+        return teacherMapper.selectCourseNameByClassesId(id);
+    }*/
+
+/*    @RequestMapping("test")
+    @ResponseBody
+    String test() {
+        return "yes";
+    }*/
+
 
 }

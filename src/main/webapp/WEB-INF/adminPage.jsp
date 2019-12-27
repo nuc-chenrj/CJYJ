@@ -113,20 +113,22 @@
     </div>
 </nav>
 
-<div class="modal fade" id="update-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+<div class="modal fade" id="update-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+     style="display: none;">
     <div class="modal-dialog" style="width: 85%; max-width: 350px;">
         <div class="modal-content">
             <div class="modal-header" align="center">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                 </button>
-                <span class = "acwing-brand">成绩预警系统</span>
+                <span class="acwing-brand">成绩预警系统</span>
             </div>
             <!-- Begin # DIV Form -->
             <div id="div-forms">
                 <!-- Begin # Login Form -->
                 <form class="sign-form" role="form" modelAttribute="admin" action="/updateAdmin" method="post">
-                    <input type='hidden' name='csrfmiddlewaretoken' value='LkYIEOiULz1W5oDCFmaRRWL1fnniL0YAAPJ577ioIWitoo4zd5AL2BMCFOgUkkEj' />
+                    <input type='hidden' name='csrfmiddlewaretoken'
+                           value='LkYIEOiULz1W5oDCFmaRRWL1fnniL0YAAPJ577ioIWitoo4zd5AL2BMCFOgUkkEj'/>
                     <div class="modal-body">
                         <div id="div-login-msg">
                             <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>

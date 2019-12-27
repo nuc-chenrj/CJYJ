@@ -48,7 +48,7 @@ public class TeacherController {
 
     /*有BUG*/
     @RequestMapping(value = "/resultInput", method = RequestMethod.POST)
-    public void resultInput(){
+    public void resultInput() {
         System.out.println(123);
     }
 /*
@@ -80,24 +80,23 @@ public class TeacherController {
     protected void searchAdmin(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html;charset=utf-8");
         request.setCharacterEncoding("utf-8");
-        try{
-            String searchway=request.getParameter("searchWay");
-            String searchname=request.getParameter("searchName");
+        try {
+            String searchway = request.getParameter("searchWay");
+            String searchname = request.getParameter("searchName");
 
             System.out.println(searchway);
             System.out.println(searchname);
 
-            Admin admin = teacherMapper.selectAdmin(searchway,searchname);
+            Admin admin = teacherMapper.selectAdmin(searchway, searchname);
             request.setAttribute("admin", admin);
 
             /*System.out.println(teacher.toString());*/
 
-            request.getRequestDispatcher("/adminSelect").forward(request,response);
-        }catch (Exception e ){
+            request.getRequestDispatcher("/adminSelect").forward(request, response);
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
-    
 
 
 }

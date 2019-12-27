@@ -2,28 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="085cd99d-4ffd-4ab5-b4ba-60e475556f17" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentGradeDetails.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Controller/AdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Controller/LogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Controller/LogController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Controller/StudentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Controller/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Controller/TeacherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/JavaeeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/JavaeeApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Mapper/AdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Mapper/AdminMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Mapper/StudentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Mapper/StudentMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Mapper/TeacherMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Mapper/TeacherMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/Admin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/Classes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/Classes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/SC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/SC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/javaee/Pojo/Teacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/adminPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/adminPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/adminSelect.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/adminSelect.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentGradeDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentGradeDetails.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentPage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentResultInput.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentResultInput.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/teacherPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/teacherPage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/test.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/test.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/group/javaee/JavaeeApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/group/javaee/JavaeeApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,6 +202,7 @@
       <workItem from="1577369499131" duration="457000" />
       <workItem from="1577412829145" duration="6834000" />
       <workItem from="1577426871576" duration="12865000" />
+      <workItem from="1577448348322" duration="6942000" />
     </task>
     <task id="LOCAL-00001" summary="开始">
       <created>1577255638214</created>
@@ -294,10 +291,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="449" y="144" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.834@0.0.1536.834" timestamp="1577429072347" />
-    <state x="264" y="7" key="CommitChangelistDialog2" timestamp="1577416953148">
+    <state x="264" y="7" key="CommitChangelistDialog2" timestamp="1577441835988">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="264" y="7" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1577416953148" />
+    <state x="264" y="7" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1577441835988" />
     <state x="733" y="183" key="FileChooserDialogImpl" timestamp="1577364679088">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -306,38 +303,38 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="562" y="298" width="398" height="219" key="Github.ShareDialog/0.0.1536.834@0.0.1536.834" timestamp="1577363143323" />
-    <state width="1215" height="147" key="GridCell.Tab.0.bottom" timestamp="1577439784435">
+    <state width="1225" height="113" key="GridCell.Tab.0.bottom" timestamp="1577455427383">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1215" height="147" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1577439784435" />
-    <state width="1215" height="147" key="GridCell.Tab.0.center" timestamp="1577439784435">
+    <state width="1225" height="113" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1577455427383" />
+    <state width="1225" height="113" key="GridCell.Tab.0.center" timestamp="1577455427383">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1215" height="147" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1577439784435" />
-    <state width="1215" height="147" key="GridCell.Tab.0.left" timestamp="1577439784434">
+    <state width="1225" height="113" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1577455427383" />
+    <state width="1225" height="113" key="GridCell.Tab.0.left" timestamp="1577455427383">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1215" height="147" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1577439784434" />
-    <state width="1215" height="147" key="GridCell.Tab.0.right" timestamp="1577439784435">
+    <state width="1225" height="113" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1577455427383" />
+    <state width="1225" height="113" key="GridCell.Tab.0.right" timestamp="1577455427383">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1215" height="147" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1577439784435" />
-    <state width="1214" height="44" key="GridCell.Tab.1.bottom" timestamp="1577439784413">
+    <state width="1225" height="113" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1577455427383" />
+    <state width="1225" height="113" key="GridCell.Tab.1.bottom" timestamp="1577455427384">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1214" height="44" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1577439784413" />
-    <state width="1214" height="44" key="GridCell.Tab.1.center" timestamp="1577439784413">
+    <state width="1225" height="113" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1577455427384" />
+    <state width="1225" height="113" key="GridCell.Tab.1.center" timestamp="1577455427383">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1214" height="44" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1577439784413" />
-    <state width="1214" height="44" key="GridCell.Tab.1.left" timestamp="1577439784413">
+    <state width="1225" height="113" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1577455427383" />
+    <state width="1225" height="113" key="GridCell.Tab.1.left" timestamp="1577455427383">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1214" height="44" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1577439784413" />
-    <state width="1214" height="44" key="GridCell.Tab.1.right" timestamp="1577439784413">
+    <state width="1225" height="113" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1577455427383" />
+    <state width="1225" height="113" key="GridCell.Tab.1.right" timestamp="1577455427384">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1214" height="44" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1577439784413" />
+    <state width="1225" height="113" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1577455427384" />
     <state x="147" y="72" key="MergeDialog" timestamp="1577364452875">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -354,10 +351,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="298" y="129" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1577416960903" />
-    <state x="470" y="281" key="com.intellij.ide.util.TipDialog" timestamp="1577426875479">
+    <state x="470" y="281" key="com.intellij.ide.util.TipDialog" timestamp="1577448351808">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="470" y="281" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1577426875479" />
+    <state x="470" y="281" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1577448351808" />
     <state x="562" y="334" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1577364381212">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

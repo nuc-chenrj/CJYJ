@@ -16,5 +16,4 @@ public class Classes {
     private List<Course>classCourse;
     private List<Teacher>classTeacher;
 
-
 }

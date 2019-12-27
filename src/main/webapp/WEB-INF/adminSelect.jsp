@@ -1,4 +1,3 @@
-
 <%@ page import="com.group.javaee.Pojo.Admin" %>
 
 <%--
@@ -135,13 +134,12 @@
 <%
     Admin admin = (Admin) request.getAttribute("admin");
 
-    if(admin!=null){
+    if (admin != null) {
         System.out.println("yes");
         System.out.println(admin.getAdminId());
         System.out.println(admin.getAdminName());
         System.out.println(admin.getAdminEmail());
-    }
-    else {
+    } else {
         System.out.println("no");
         /*System.out.println(teacher.toString());*/
     }
@@ -172,8 +170,6 @@
         </div>
     </div>
 </form>
-
-
 
 <%--<table border="1" align="center" style="width: 100%">
 

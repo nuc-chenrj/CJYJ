@@ -38,71 +38,67 @@ public class LogController {
          *
          * 201900001学生 00000-99999
          */
-        if(request.getParameter("license").length()==7){
-            Admin admin=new Admin();
+        if (request.getParameter("license").length() == 7) {
+            Admin admin = new Admin();
             admin.setAdminId(Integer.parseInt(request.getParameter("license")));
             admin.setAdminPassword(request.getParameter("password"));
 
             System.out.println(admin.getAdminId());
             System.out.println(admin.getAdminPassword());
-            admin=adminMapper.checkAdmin(admin);
+            admin = adminMapper.checkAdmin(admin);
 
-            if(admin!=null){
-                HttpSession session=request.getSession();
-                session.setAttribute("license",request.getParameter("license"));
+            if (admin != null) {
+                HttpSession session = request.getSession();
+                session.setAttribute("license", request.getParameter("license"));
 
                 out.println("<script> alert(\"登陆成功!\"); </script>");
-                response.setHeader("refresh","1;URL=adminPage");
-            }else{
+                response.setHeader("refresh", "1;URL=adminPage");
+            } else {
                 out.println("<script> alert(\"证件或密码错误!\"); </script>");
-                response.setHeader("refresh","1;URL=index");
+                response.setHeader("refresh", "1;URL=index");
             }
-        }
-        else if(request.getParameter("license").length()==8){
-            Teacher teacher=new Teacher();
+        } else if (request.getParameter("license").length() == 8) {
+            Teacher teacher = new Teacher();
             teacher.setTeacherId(Integer.parseInt(request.getParameter("license")));
             teacher.setTeacherPassword(request.getParameter("password"));
-            teacher=teacherMapper.checkTeacher(teacher);
+            teacher = teacherMapper.checkTeacher(teacher);
 
-            if(teacher!=null){
-                HttpSession session=request.getSession();
-                session.setAttribute("license",request.getParameter("license"));
+            if (teacher != null) {
+                HttpSession session = request.getSession();
+                session.setAttribute("license", request.getParameter("license"));
                 out.println("<script> alert(\"登陆成功!\"); </script>");
-                response.setHeader("refresh","1;URL=teacherPage");
-            }else{
+                response.setHeader("refresh", "1;URL=teacherPage");
+            } else {
                 out.println("<script> alert(\"证件或密码错误!\"); </script>");
-                response.setHeader("refresh","1;URL=index");
+                response.setHeader("refresh", "1;URL=index");
             }
-        }
-        else if(request.getParameter("license").length()==9){
-            Student student=new Student();
+        } else if (request.getParameter("license").length() == 9) {
+            Student student = new Student();
             student.setStudentId(Integer.parseInt(request.getParameter("license")));
             student.setStudentPassword(request.getParameter("password"));
 
-            student=studentMapper.checkStudent(student);
-            if(student!=null){
-                HttpSession session=request.getSession();
-                session.setAttribute("license",request.getParameter("license"));
+            student = studentMapper.checkStudent(student);
+            if (student != null) {
+                HttpSession session = request.getSession();
+                session.setAttribute("license", request.getParameter("license"));
 
                 out.println("<script> alert(\"登陆成功!\"); </script>");
-                response.setHeader("refresh","1;URL=studentPage");
-            }else{
+                response.setHeader("refresh", "1;URL=studentPage");
+            } else {
                 out.println("<script> alert(\"证件或密码错误!\"); </script>");
-                response.setHeader("refresh","1;URL=index");
+                response.setHeader("refresh", "1;URL=index");
             }
-        }
-        else{
+        } else {
             out.println("<script> alert(\"证件无效!\"); </script>");
-            response.setHeader("refresh","1;URL=index");
+            response.setHeader("refresh", "1;URL=index");
         }
     }
 
     @RequestMapping("/logout")
     public void logout(HttpServletRequest request, HttpServletResponse response) {
         request.getSession().invalidate();
-        response.setHeader("refresh","1;URL=index");
+        response.setHeader("refresh", "1;URL=index");
     }
-
 
 
 }

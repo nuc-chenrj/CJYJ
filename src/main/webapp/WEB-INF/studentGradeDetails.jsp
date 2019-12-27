@@ -67,11 +67,12 @@
                 </li>
                 <li>
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <strong id="id_user_username"><%=session.getAttribute("license")%></strong>
+                        <strong id="id_user_username"><%=session.getAttribute("license")%>
+                        </strong>
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href = "/logout">登出</a></li>
+                        <li><a href="/logout">登出</a></li>
                     </ul>
                 </li>
             </ul>
@@ -82,27 +83,29 @@
 </nav>
 
 
-
-<div class="modal fade" id="update-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+<div class="modal fade" id="update-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+     style="display: none;">
     <div class="modal-dialog" style="width: 85%; max-width: 350px;">
         <div class="modal-content">
             <div class="modal-header" align="center">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                 </button>
-                <span class = "acwing-brand">成绩预警系统</span>
+                <span class="acwing-brand">成绩预警系统</span>
             </div>
             <!-- Begin # DIV Form -->
             <div id="">
                 <!-- Begin # Login Form -->
                 <form class="sign-form" role="form" modelAttribute="student" action="/updateStudent" method="post">
-                    <input type='hidden' name='csrfmiddlewaretoken' value='LkYIEOiULz1W5oDCFmaRRWL1fnniL0YAAPJ577ioIWitoo4zd5AL2BMCFOgUkkEj' />
+                    <input type='hidden' name='csrfmiddlewaretoken'
+                           value='LkYIEOiULz1W5oDCFmaRRWL1fnniL0YAAPJ577ioIWitoo4zd5AL2BMCFOgUkkEj'/>
                     <div class="modal-body">
                         <div>
                             <div class="glyphicon glyphicon-chevron-right"></div>
                             <span>录入信息</span>
                         </div>
-                        <input name="studentPassword" class="form-control" type="password" placeholder="密码" maxlength="30">
+                        <input name="studentPassword" class="form-control" type="password" placeholder="密码"
+                               maxlength="30">
                         <input name="studentName" class="form-control" type="" placeholder="姓名" maxlength="30">
                         <input name="studentClass" class="form-control" type="tex" placeholder="班级" maxlength="30">
                         <input name="studentEmail" class="form-control" type="email" placeholder="邮箱" maxlength="30">

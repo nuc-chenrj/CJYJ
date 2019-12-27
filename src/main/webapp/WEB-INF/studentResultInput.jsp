@@ -2,7 +2,11 @@
 <%@ page import="javax.validation.constraints.AssertFalse" %>
 <%@ page import="org.springframework.beans.factory.annotation.Autowired" %>
 <%@ page import="com.group.javaee.Mapper.AdminMapper" %>
-<%@ page import="com.group.javaee.Mapper.TeacherMapper" %><%--
+<%@ page import="com.group.javaee.Mapper.TeacherMapper" %>
+<%@ page import="org.springframework.web.context.support.WebApplicationContextUtils" %>
+<%@ page import="org.springframework.context.ApplicationContext" %>
+<%@ page import="java.util.Iterator" %>
+<%@ page import="java.util.Set" %><%--
   Created by IntelliJ IDEA.
   User: wan14
   Date: 2019/12/22
@@ -81,11 +85,12 @@
                 </li>
                 <li>
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <strong id="id_user_username"><%=session.getAttribute("license")%></strong>
+                        <strong id="id_user_username"><%=session.getAttribute("license")%>
+                        </strong>
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href = "/logout">登出</a></li>
+                        <li><a href="/logout">登出</a></li>
                     </ul>
                 </li>
             </ul>
@@ -94,26 +99,29 @@
     </div>
 </nav>
 
-<div class="modal fade" id="update-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+<div class="modal fade" id="update-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+     style="display: none;">
     <div class="modal-dialog" style="width: 85%; max-width: 350px;">
         <div class="modal-content">
             <div class="modal-header" align="center">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                 </button>
-                <span class = "acwing-brand">成绩预警系统</span>
+                <span class="acwing-brand">成绩预警系统</span>
             </div>
             <!-- Begin # DIV Form -->
             <div id="">
                 <!-- Begin # Login Form -->
                 <form class="sign-form" role="form" modelAttribute="teacher" action="/updateTeacher" method="post">
-                    <input type='hidden' name='csrfmiddlewaretoken' value='LkYIEOiULz1W5oDCFmaRRWL1fnniL0YAAPJ577ioIWitoo4zd5AL2BMCFOgUkkEj' />
+                    <input type='hidden' name='csrfmiddlewaretoken'
+                           value='LkYIEOiULz1W5oDCFmaRRWL1fnniL0YAAPJ577ioIWitoo4zd5AL2BMCFOgUkkEj'/>
                     <div class="modal-body">
                         <div>
                             <div class="glyphicon glyphicon-chevron-right"></div>
                             <span>录入信息</span>
                         </div>
-                        <input name="teacherPassword" class="form-control" type="password" placeholder="密码" maxlength="30">
+                        <input name="teacherPassword" class="form-control" type="password" placeholder="密码"
+                               maxlength="30">
                         <input name="teacherName" class="form-control" type="" placeholder="姓名" maxlength="30">
                         <input name="teacherEmail" class="form-control" type="email" placeholder="邮箱" maxlength="30">
                         <input name="teacherTel" class="form-control" type="text" placeholder="电话" maxlength="30">
@@ -133,32 +141,40 @@
 </div>
 
 <%
-
-
+    Integer license = Integer.parseInt((String) session.getAttribute("license"));
+    ServletContext sc = this.getServletConfig().getServletContext();
+    ApplicationContext ac = WebApplicationContextUtils.getWebApplicationContext(sc);
+    TeacherMapper teacherMapper = (TeacherMapper) ac.getBean("teacherMapper");
+    System.out.println(teacherMapper.selectClassId(license));
+    Set<Integer> classlist = teacherMapper.selectClassId(license);
+    Iterator<Integer> iter = classlist.iterator();
 %>
 
 
-
 <form action="SearchBookServlet" method="post">
-    <input type='hidden' name='csrfmiddlewaretoken' value='LkYIEOiULz1W5oDCFmaRRWL1fnniL0YAAPJ577ioIWitoo4zd5AL2BMCFOgUkkEj' />
+    <input type='hidden' name='csrfmiddlewaretoken'
+           value='LkYIEOiULz1W5oDCFmaRRWL1fnniL0YAAPJ577ioIWitoo4zd5AL2BMCFOgUkkEj'/>
     <div>
         <div>
             <div class="glyphicon glyphicon-chevron-right"></div>
-            <span>检索</span>
+            <span>成绩录入</span>
         </div>
         <div style="display: inline">
-            <label style="vertical-align: top">检阅途径：</label>
+            <label style="vertical-align: top">班级：</label>
 
-            <select name="searchway" style="width: 130px;height: 20px; vertical-align: top">
-
-                <option value="ISBN">ISBN</option>
-                <option value="name">书籍名称</option>
-                <option value="author">作者</option>
-                <option value="publisher">出版社</option>
-                <option value="classify">分类</option>
-
-
-
+            <select id="classID" onchange="goChange()" style="width: 130px;height: 20px; vertical-align: top">
+                <%
+                    try {
+                        while (iter.hasNext()) {
+                            Integer x = iter.next();
+                %>
+                <option value="ISBN"><%=x %></option>
+                <%
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                %>
             </select>
 
         </div>
@@ -175,6 +191,12 @@
     <div class="col-xs-12 center-banner-title">
     </div>
 </div>
+
+<script>
+    function goChange(){
+        window.location.href="test?value="+document.getElementById("classID").value;
+    }
+</script>
 <script src="https://cdn.acwing.com/static/web/js/status/click.js"></script>
 </body>
 </html>

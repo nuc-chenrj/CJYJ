@@ -13,5 +13,4 @@ public class Admin {
     private String adminName;
     private Integer adminTel;
     private String adminEmail;
-
 }

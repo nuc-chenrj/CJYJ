@@ -30,7 +30,7 @@ public class StudentController {
     StudentMapper studentMapper;
 
     @RequestMapping("/index")
-    public String page(){
+    public String page() {
         return "index";
     }
 
@@ -59,20 +59,20 @@ public class StudentController {
     protected void searchAdmin(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html;charset=utf-8");
         request.setCharacterEncoding("utf-8");
-        try{
-            String searchway=request.getParameter("searchWay");
-            String searchname=request.getParameter("searchName");
+        try {
+            String searchway = request.getParameter("searchWay");
+            String searchname = request.getParameter("searchName");
 
             System.out.println(searchway);
             System.out.println(searchname);
 
-            Teacher teacher = studentMapper.selectTeacher(searchway,searchname);
+            Teacher teacher = studentMapper.selectTeacher(searchway, searchname);
             request.setAttribute("teacher", teacher);
 
             /*System.out.println(teacher.toString());*/
 
-            request.getRequestDispatcher("/teacherSelect").forward(request,response);
-        }catch (Exception e ){
+            request.getRequestDispatcher("/teacherSelect").forward(request, response);
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
