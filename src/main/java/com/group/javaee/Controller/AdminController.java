@@ -5,6 +5,7 @@ import com.group.javaee.Mapper.AdminMapper;
 import com.group.javaee.Mapper.StudentMapper;
 import com.group.javaee.Mapper.TeacherMapper;
 import com.group.javaee.Pojo.Admin;
+import com.group.javaee.Pojo.Course;
 import com.group.javaee.Pojo.Teacher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -98,4 +99,68 @@ public class AdminController {
     }*/
 
 
+    @RequestMapping(value = "/insertTeacher", method = RequestMethod.POST)
+    public void insertTeacher(@Valid @ModelAttribute Teacher teacher, Model model, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html;charset=utf-8");
+        request.setCharacterEncoding("utf-8");
+        PrintWriter out = response.getWriter();
+
+        model.addAttribute("teacher", teacher);
+        String license = request.getSession().getAttribute("license").toString().trim();
+        teacher.setTeacherId(Integer.parseInt(license));
+        System.out.println(teacher.toString());
+
+        boolean ok = adminMapper.insertTeacher(teacher);
+        if (ok) {
+            out.println("<script> alert(\"插入成功!\"); </script>");
+            response.setHeader("refresh", "1;URL=adminPage");
+        } else {
+            out.println("<script> alert(\"插入失败!\"); </script>");
+            response.setHeader("refresh", "1;URL=adminPage");
+        }
+    }
+
+    @RequestMapping(value = "/insertCourse", method = RequestMethod.POST)
+    public void insertCourse(@Valid @ModelAttribute Course course, Model model, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html;charset=utf-8");
+        request.setCharacterEncoding("utf-8");
+        PrintWriter out = response.getWriter();
+
+        model.addAttribute("course", course);
+
+        boolean ok = adminMapper.insertCourse(course);
+        if (ok) {
+            out.println("<script> alert(\"插入成功!\"); </script>");
+            response.setHeader("refresh", "1;URL=adminPage");
+        } else {
+            out.println("<script> alert(\"插入失败!\"); </script>");
+            response.setHeader("refresh", "1;URL=adminPage");
+        }
+    }
+
+
+/*    @RequestMapping("/testController")
+    @ResponseBody
+    String test() {
+        return "test";
+    }*/
+
+    @RequestMapping("/deleteTeacher")
+    public void deleteTeacher(@Valid @ModelAttribute Admin admin, Model model, HttpServletRequest request, HttpServletResponse response) throws IOException {
+        response.setContentType("text/html;charset=utf-8");
+        request.setCharacterEncoding("utf-8");
+        PrintWriter out = response.getWriter();
+
+        int teacherID = Integer.parseInt(request.getParameter("ID"));
+        System.out.println(teacherID);
+
+        boolean ok = adminMapper.deleteTeacher(teacherID);
+        if (ok) {
+            out.println("<script> alert(\"删除成功!\"); </script>");
+            response.setHeader("refresh", "1;URL=adminPage");
+        } else {
+            out.println("<script> alert(\"删除失败!\"); </script>");
+            response.setHeader("refresh", "1;URL=adminPage");
+        }
+    }
 }

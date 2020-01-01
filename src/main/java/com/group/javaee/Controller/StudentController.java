@@ -3,6 +3,7 @@ package com.group.javaee.Controller;
 import com.group.javaee.Mapper.StudentMapper;
 import com.group.javaee.Pojo.Admin;
 import com.group.javaee.Pojo.Student;
+import com.group.javaee.Pojo.StudentAndGrade;
 import com.group.javaee.Pojo.Teacher;
 import com.group.javaee.Service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -56,7 +58,7 @@ public class StudentController {
     }
 
     @RequestMapping(value = "/searchTeacher", method = RequestMethod.POST)
-    protected void searchAdmin(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void searchAdmin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=utf-8");
         request.setCharacterEncoding("utf-8");
         try {
@@ -70,8 +72,39 @@ public class StudentController {
             request.setAttribute("teacher", teacher);
 
             /*System.out.println(teacher.toString());*/
+            String license = request.getSession().getAttribute("license").toString().trim();
+            /**
+             * 2019001
+             * 201900001
+             */
+            if (license.length() == 7) {
+                request.getRequestDispatcher("/AdminTeacherSelect").forward(request, response);
+                System.out.println(7);
+            } else if (license.length() == 9) {
+                request.getRequestDispatcher("/teacherSelect").forward(request, response);
+                System.out.println(9);
 
-            request.getRequestDispatcher("/teacherSelect").forward(request, response);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     *
+     * 12.31
+     */
+
+    @RequestMapping("/selfGradeSelect")
+    public void selfGradeSelect(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        response.setContentType("text/html;charset=utf-8");
+        request.setCharacterEncoding("utf-8");
+        try {
+            Integer license = Integer.parseInt((String)request.getSession().getAttribute("license"));
+            System.out.println("license="+license);
+            List<StudentAndGrade> list =studentMapper.selfGradeSelect(license);
+            request.setAttribute("StudentAndGradeList", list);
+            request.getRequestDispatcher("/studentSelfGradeSelect").forward(request, response);
         } catch (Exception e) {
             e.printStackTrace();
         }

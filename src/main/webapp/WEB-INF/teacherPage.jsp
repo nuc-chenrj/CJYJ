@@ -4,6 +4,8 @@
 <%@ page import="org.springframework.web.context.support.WebApplicationContextUtils" %>
 <%@ page import="org.springframework.context.ApplicationContext" %>
 <%@ page import="com.group.javaee.Mapper.AdminMapper" %>
+<%@ page import="com.group.javaee.Pojo.Admin" %>
+<%@ page import="com.group.javaee.Pojo.Teacher" %>
 
 <%--
   Created by IntelliJ IDEA.
@@ -61,19 +63,9 @@
             <ul class="nav navbar-nav">
                 <li class="active"><a href="">首页</a></li>
                 <li class=""><a href="adminSelect">管理员查询</a></li>
-                <li>
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        学生成绩管理
-                        <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="studentResultInput">成绩录入</a></li>
-                        <li><a href="#" data-toggle="modal" data-target="#borrow-modal">成绩查询</a></li>
-                    </ul>
-                </li>
+                <li><a href="/studentGradeManage" >学生成绩管理</a></li>
                 <li><a href="#" data-toggle="modal" data-target="#update-modal">查看/修改个人信息</a></li>
             </ul>
-
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <a href="/user/myspace/notification/1/">
@@ -90,11 +82,17 @@
                     </ul>
                 </li>
             </ul>
-
-
         </div>
     </div>
 </nav>
+<%
+    Integer license = Integer.parseInt((String) session.getAttribute("license"));
+    ServletContext sc = this.getServletConfig().getServletContext();
+    ApplicationContext ac = WebApplicationContextUtils.getWebApplicationContext(sc);
+    TeacherMapper teacherMapper = (TeacherMapper) ac.getBean("teacherMapper");
+    Teacher teacher = teacherMapper.selectTeacherById(license);
+%>
+
 
 <div class="modal fade" id="update-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog" style="width: 85%; max-width: 350px;">
@@ -115,10 +113,12 @@
                             <div class="glyphicon glyphicon-chevron-right"></div>
                             <span>录入信息</span>
                         </div>
-                        <input name="teacherPassword" class="form-control" type="password" placeholder="密码" maxlength="30">
-                        <input name="teacherName" class="form-control" type="" placeholder="姓名" maxlength="30">
-                        <input name="teacherEmail" class="form-control" type="email" placeholder="邮箱" maxlength="30">
-                        <input name="teacherTel" class="form-control" type="text" placeholder="电话" maxlength="30">
+                        <input name="teacherId" class="form-control" type="text" placeholder="" maxlength="30"
+                               value="<%="证件号码："+teacher.getTeacherId()%>" disabled="disabled">
+                        <input name="teacherPassword" class="form-control" type="password" placeholder="密码" maxlength="30" value="<%=teacher.getTeacherPassword()%>">
+                        <input name="teacherName" class="form-control" type="" placeholder="姓名" maxlength="30" value="<%=teacher.getTeacherName()%>">
+                        <input name="teacherEmail" class="form-control" type="email" placeholder="邮箱" maxlength="30" value="<%=teacher.getTeacherEmail()%>">
+                        <input name="teacherTel" class="form-control" type="text" placeholder="电话" maxlength="30" value="<%=teacher.getTeacherTel()%>">
                     </div>
 
                     <div class="modal-footer">

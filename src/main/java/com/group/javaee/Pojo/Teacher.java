@@ -16,7 +16,8 @@ public class Teacher {
 
     private List<Integer> teacherClassId;
 
-    private List<Course> teacherCourse;
+    /*private List<Course> teacherCourse;*/
+    private Course teacherCourse;
 
     private String teacherTel;
     private String teacherEmail;

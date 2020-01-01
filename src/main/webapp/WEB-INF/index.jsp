@@ -53,7 +53,7 @@
         <!-- Items -->
         <div class="collapse navbar-collapse" id="topNavBar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="">首页</a></li>
+                <li class=""><a href="">首页</a></li>
                 <li class=""><a href="">公示</a></li>
                 <li class=""><a href="">实施办法</a></li>
                 <li class=""><a href="">建议</a></li>
