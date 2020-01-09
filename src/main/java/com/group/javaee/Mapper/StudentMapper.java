@@ -14,7 +14,7 @@ public interface StudentMapper {
     @Select("select * from student where studentId=#{studentId} and studentPassword=#{studentPassword}")
     Student checkStudent(Student student);
 
-    @Update("update student set studentPassword=#{studentPassword},studentName=#{studentName},studentClass=#{studentClass},studentEmail=#{studentEmail},studentTel=#{studentTel},studentOrigin=#{studentOrigin} where studentId=#{studentId}")
+    @Update("update student set studentPassword=#{studentPassword},studentName=#{studentName},studentClassId=#{studentClassId},studentEmail=#{studentEmail},studentTel=#{studentTel} where studentId=#{studentId}")
     boolean updateStudent(Student student);
 
     @Select("select * from teacher where ${searchWay}=#{searchName}")

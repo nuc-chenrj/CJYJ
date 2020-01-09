@@ -5,7 +5,8 @@
 <%@ page import="org.springframework.web.context.support.WebApplicationContextUtils" %>
 <%@ page import="java.util.Set" %>
 <%@ page import="java.util.Iterator" %>
-<%@ page import="com.group.javaee.Mapper.AdminMapper" %><%--
+<%@ page import="com.group.javaee.Mapper.AdminMapper" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: wan14
   Date: 2019/12/22
@@ -78,7 +79,7 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a href="#" data-toggle="modal" data-target="#borrow-modal">学生成绩查询</a></li>
-                        <li><a href="adminSelectClassesGrade">班级成绩查询</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#borrow-modal">班级成绩查询</a></li>
                         <li><a href="warnStudent">预警学生查询</a></li>
                     </ul>
                 </li>
@@ -90,7 +91,7 @@
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="AdminCourseSelect">课程查询</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#borrow-modal">课程查询</a></li>
                         <li><a href="#" data-toggle="modal" data-target="#addCourse-modal">课程录入</a></li>
                     </ul>
                 </li>
@@ -182,9 +183,7 @@
                             <span>录入信息</span>
                         </div>
                         <input name="courseName" class="form-control" type="text" placeholder="课程名" maxlength="30">
-
                         <input name="method" class="form-control" type="text" placeholder="考试类型" maxlength="30">
-
                     </div>
 
                     <div class="modal-footer">
@@ -199,8 +198,6 @@
         </div>
     </div>
 </div>
-
-
 <%
     Integer license = Integer.parseInt((String) session.getAttribute("license"));
     ServletContext sc = this.getServletConfig().getServletContext();
@@ -238,8 +235,8 @@
                                maxlength="30" value="<%=admin.getAdminPassword()%>">
                         <input name="adminName" class="form-control" type="text" placeholder="姓名"
                                maxlength="30" value="<%=admin.getAdminName()%>">
-                        <input name="adminTel" class="form-control" type="text" placeholder="电话" maxlength="16" value="<%=admin.getAdminTel()%>" >
-                        <input name="adminEmail" class="form-control" type="email" placeholder="邮箱" maxlength="16"value="<%=admin.getAdminEmail()%>" >
+                        <input name="adminTel" class="form-control" type="tex" placeholder="电话" maxlength="16" value="<%=admin.getAdminTel()%>" >
+                        <input name="adminEmail" class="form-control" type="tex" placeholder="邮箱" maxlength="16"value="<%=admin.getAdminEmail()%>" >
                     </div>
 
                     <div class="modal-footer">
@@ -254,6 +251,49 @@
         </div>
     </div>
 </div>
+
+<%
+    ServletContext sc1 = this.getServletConfig().getServletContext();
+    ApplicationContext ac1 = WebApplicationContextUtils.getWebApplicationContext(sc1);
+
+    AdminMapper adminMapper1 = (AdminMapper) ac.getBean("adminMapper");
+
+    List<Integer> list = adminMapper1.selectClassesId();
+    System.out.println(list);
+    Iterator<Integer> iter = list.iterator();
+%>
+
+
+<form action="/selectClassesGrade" method="post">
+    <input type='hidden' name='csrfmiddlewaretoken'
+           value='LkYIEOiULz1W5oDCFmaRRWL1fnniL0YAAPJ577ioIWitoo4zd5AL2BMCFOgUkkEj'/>
+    <div>
+        <div>
+            <div class="glyphicon glyphicon-chevron-right"></div>
+            <span>成绩录入</span>
+        </div>
+        <div style="display: inline">
+            <label style="vertical-align: top">班级：</label>
+            <select name="classID" style="width: 130px;height: 20px; vertical-align: top">
+                <%
+                    try {
+                        while (iter.hasNext()) {
+                            Integer x = iter.next();
+                %>
+                <option name="classId"><%=x%></option>
+                <%
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                %>
+            </select>
+        </div>
+        <div style="display: inline; vertical-align: bottom">
+            <input type="submit" style="vertical-align: top" style="width:40px;height: 15px;" value="提交"/>
+        </div>
+    </div>
+</form>
 
 
 <div class="row center-banner">

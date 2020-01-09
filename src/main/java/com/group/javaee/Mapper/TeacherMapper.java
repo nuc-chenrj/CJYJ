@@ -38,4 +38,11 @@ public interface TeacherMapper {
     @Select("select grade,student.studentId,studentName,course.courseName from student,SC,course where student.studentId=SC.studentId and course.courseId=SC.courseId and SC.teacherId=#{teacherId} and student.studentClassId=#{classId}")
     List<StudentAndGradeAndCourse> gradeSelect(Integer teacherId,Integer classId);
 
+    @Select("select course.courseId from course where course.courseName=#{courseName}")
+    Integer selectCourseIdByCourseName(String courseName);
+
+    @Update("update sc set grade=#{grade} where studentId=#{studentId} and courseId=#{courseId}")
+    boolean saveStudentGrade(Integer courseId,Integer studentId,Integer grade);
+
+
 }

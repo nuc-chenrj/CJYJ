@@ -97,7 +97,7 @@
 
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="/user/myspace/notification/1/">
+                    <a>
                         <span class="glyphicon glyphicon-bell" style="font-size: 20px;"></span>
                     </a>
                 </li>
@@ -231,9 +231,6 @@
                     <a href="/deleteTeacher?ID=<%=teacher.getTeacherId()%>">删除</a>
                 </div>
 
-                <div class="col-md-6">
-                    <a href="#" data-toggle="modal" data-target="#update-modal"  data-teacherId="<%=teacher.getTeacherId()%>">更新</a>
-                </div>
             </div>
         </td>
     </tr>
@@ -251,6 +248,7 @@
 </div>
 
 
+<%--
 <script>
     //绑定模态框展示的方法
     $('#updateBook-modal').on('show.bs.modal', function (event) {
@@ -261,14 +259,8 @@
         modal.find('#teacherId').val("teacherId:"+teacherId)
     })
 </script>
+--%>
 
 <script src="https://cdn.acwing.com/static/web/js/status/click.js"></script>
 </body>
 </html>
-
-<%--
-<%
-    System.out.println("yes");
-%>
---%>
-

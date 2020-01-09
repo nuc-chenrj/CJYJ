@@ -3,9 +3,11 @@
 <%@ page import="org.springframework.context.ApplicationContext" %>
 <%@ page import="com.group.javaee.Mapper.TeacherMapper" %>
 <%@ page import="org.springframework.web.context.support.WebApplicationContextUtils" %>
-<%@ page import="java.util.Set" %>
-<%@ page import="java.util.Iterator" %>
-<%@ page import="com.group.javaee.Mapper.AdminMapper" %><%--
+<%@ page import="com.group.javaee.Mapper.AdminMapper" %>
+<%@ page import="com.group.javaee.Pojo.StudentAndGradeAndCourse" %>
+<%@ page import="java.util.*" %>
+<%@ page import="com.group.javaee.Pojo.Student" %>
+<%@ page import="javafx.util.Pair" %><%--
   Created by IntelliJ IDEA.
   User: wan14
   Date: 2019/12/22
@@ -78,7 +80,7 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a href="#" data-toggle="modal" data-target="#borrow-modal">学生成绩查询</a></li>
-                        <li><a href="adminSelectClassesGrade">班级成绩查询</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#borrow-modal">班级成绩查询</a></li>
                         <li><a href="warnStudent">预警学生查询</a></li>
                     </ul>
                 </li>
@@ -90,7 +92,7 @@
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="AdminCourseSelect">课程查询</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#borrow-modal">课程查询</a></li>
                         <li><a href="#" data-toggle="modal" data-target="#addCourse-modal">课程录入</a></li>
                     </ul>
                 </li>
@@ -182,9 +184,7 @@
                             <span>录入信息</span>
                         </div>
                         <input name="courseName" class="form-control" type="text" placeholder="课程名" maxlength="30">
-
                         <input name="method" class="form-control" type="text" placeholder="考试类型" maxlength="30">
-
                     </div>
 
                     <div class="modal-footer">
@@ -199,8 +199,6 @@
         </div>
     </div>
 </div>
-
-
 <%
     Integer license = Integer.parseInt((String) session.getAttribute("license"));
     ServletContext sc = this.getServletConfig().getServletContext();
@@ -238,8 +236,10 @@
                                maxlength="30" value="<%=admin.getAdminPassword()%>">
                         <input name="adminName" class="form-control" type="text" placeholder="姓名"
                                maxlength="30" value="<%=admin.getAdminName()%>">
-                        <input name="adminTel" class="form-control" type="text" placeholder="电话" maxlength="16" value="<%=admin.getAdminTel()%>" >
-                        <input name="adminEmail" class="form-control" type="email" placeholder="邮箱" maxlength="16"value="<%=admin.getAdminEmail()%>" >
+                        <input name="adminTel" class="form-control" type="tex" placeholder="电话" maxlength="16"
+                               value="<%=admin.getAdminTel()%>">
+                        <input name="adminEmail" class="form-control" type="tex" placeholder="邮箱" maxlength="16"
+                               value="<%=admin.getAdminEmail()%>">
                     </div>
 
                     <div class="modal-footer">
@@ -255,6 +255,65 @@
     </div>
 </div>
 
+<form action="AdminSaveStudentGrade" method="post">
+    <table border="1" align="center" style="width: 95%">
+        <tr>
+            <td>
+                <%="学号"%>
+            </td>
+            <td>
+                <%="姓名"%>
+            </td>
+            <%
+                Map<Integer, Integer> map = new IdentityHashMap<>();
+
+                Set<String> courseName = (Set<String>) request.getAttribute("courseName");
+                int n = courseName.size();
+                for (String value : courseName) {
+            %>
+            <td>
+                <%=value%>
+            </td>
+            <%
+                }
+            %>
+        </tr>
+
+        <%
+            List<Student> list = (List<Student>) request.getAttribute("studentList");
+            for (Student student : list) {
+        %>
+        <tr>
+            <td>
+                <%=student.getStudentId()%>
+            </td>
+            <td>
+                <%=student.getStudentName()%>
+            </td>
+            <%                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                for (String value : courseName) {
+                    Integer studentid=student.getStudentId();
+                    Integer courseid=adminMapper.selectCourseId(value);
+                    map.put(new Integer(studentid),courseid);
+                    /*System.out.println(map);*/
+            %>
+            <td><input name="grade" class="form-control" type="text" placeholder="成绩" maxlength="5" value="<%=adminMapper.selectGradeByCourseIdAndStudentId(courseid,studentid)%>"></td>
+            <%
+                }
+            %>
+        </tr>
+        <%
+            }
+            session.setAttribute("map",map);
+            /*request.setAttribute("map",map);*/
+        %>
+    </table>
+    <div class="modal-footer">
+        <div>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">保存</button>
+        </div>
+    </div>
+</form>
 
 <div class="row center-banner">
     <div class="col-xs-12 center-banner-title">
@@ -263,4 +322,3 @@
 <script src="https://cdn.acwing.com/static/web/js/status/click.js"></script>
 </body>
 </html>
-

@@ -68,7 +68,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="/user/myspace/notification/1/">
+                    <a>
                         <span class="glyphicon glyphicon-bell" style="font-size: 20px;"></span>
                     </a>
                 </li>
@@ -92,7 +92,6 @@
     TeacherMapper teacherMapper = (TeacherMapper) ac.getBean("teacherMapper");
     Teacher teacher = teacherMapper.selectTeacherById(license);
 %>
-
 
 <div class="modal fade" id="update-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog" style="width: 85%; max-width: 350px;">

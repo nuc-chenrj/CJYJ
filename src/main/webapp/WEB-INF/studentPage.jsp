@@ -6,7 +6,8 @@
 <%@ page import="com.group.javaee.Pojo.Student" %>
 <%@ page import="com.group.javaee.Pojo.StudentAndGrade" %>
 <%@ page import="java.util.List" %>
-<%@ page import="java.util.Iterator" %><%--
+<%@ page import="java.util.Iterator" %>
+<%@ page import="org.springframework.beans.factory.annotation.Autowired" %><%--
   Created by IntelliJ IDEA.
   User: wan14
   Date: 2019/12/22
@@ -68,9 +69,8 @@
 
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="/user/myspace/notification/1/">
+                    <a>
                         <span class="glyphicon glyphicon-bell" style="font-size: 20px;"></span>
-
                     </a>
                 </li>
                 <li>
@@ -135,6 +135,7 @@
     ServletContext sc = this.getServletConfig().getServletContext();
     ApplicationContext ac = WebApplicationContextUtils.getWebApplicationContext(sc);
     StudentMapper studentMapper = (StudentMapper) ac.getBean("studentMapper");
+
     Student student = studentMapper.selectStudentById(license);
 %>
 
@@ -159,15 +160,15 @@
                             <div class="glyphicon glyphicon-chevron-right"></div>
                             <span>录入信息</span>
                         </div>
-                        <input name="studentId" class="form-control" type="text" placeholder="密码" maxlength="30"
+                        <input name="studentId" class="form-control" type="text" placeholder="ID" maxlength="30"
                                value="<%="证件号码："+student.getStudentId()%>" disabled="disabled">
                         <input name="studentPassword" class="form-control" type="password" placeholder="密码"
-                               maxlength="30">
-                        <input name="studentName" class="form-control" type="" placeholder="姓名" maxlength="30">
-                        <input name="studentClass" class="form-control" type="tex" placeholder="班级" maxlength="30">
-                        <input name="studentEmail" class="form-control" type="email" placeholder="邮箱" maxlength="30">
-                        <input name="studentTel" class="form-control" type="tel" placeholder="电话" maxlength="30">
-                        <input name="studentOrigin" class="form-control" type="tel" placeholder="籍贯" maxlength="30">
+                               maxlength="30" value="<%=student.getStudentPassword()%>">
+                        <input name="studentName" class="form-control" type="" placeholder="姓名" maxlength="30"value="<%=student.getStudentName()%>">
+                        <input name="studentClassId" class="form-control" type="tex" placeholder="班级" maxlength="30"value="<%=student.getStudentClassId()%>">
+                        <input name="studentEmail" class="form-control" type="email" placeholder="邮箱" maxlength="30"value="<%=student.getStudentEmail()%>">
+                        <input name="studentTel" class="form-control" type="tel" placeholder="电话" maxlength="30"value="<%=student.getStudentTel()%>">
+                        <%--<input name="studentOrigin" class="form-control" type="tel" placeholder="籍贯" maxlength="30">--%>
                     </div>
 
                     <div class="modal-footer">

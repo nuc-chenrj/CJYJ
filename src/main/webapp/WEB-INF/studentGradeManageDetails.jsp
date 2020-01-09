@@ -1,7 +1,7 @@
 <%@ page import="com.group.javaee.Pojo.StudentAndGrade" %>
-<%@ page import="java.util.List" %>
-<%@ page import="java.util.Iterator" %>
 <%@ page import="com.group.javaee.Pojo.StudentAndGradeAndCourse" %>
+<%@ page import="java.lang.reflect.Array" %>
+<%@ page import="java.util.*" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
@@ -57,7 +57,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="/user/myspace/notification/1/">
+                    <a>
                         <span class="glyphicon glyphicon-bell" style="font-size: 20px;"></span>
                     </a>
                 </li>
@@ -104,6 +104,7 @@
             List<StudentAndGradeAndCourse> list = (List<StudentAndGradeAndCourse>) request.getAttribute("StudentAndGradeAndCourseList");
             Iterator<StudentAndGradeAndCourse> it = list.iterator();
 
+            ArrayList<Integer> ans = new ArrayList<>();
             while (it.hasNext()) {
                 StudentAndGradeAndCourse SAGAC = it.next();
         %>
@@ -125,7 +126,8 @@
                     </div>
 
                     <div class="col-md-3">
-                        <input name="password" class="form-control" type="text" placeholder="成绩" maxlength="5" value="<%=SAGAC.getGrade()%>">
+
+                        <input name="grade" class="form-control" type="text" placeholder="成绩" maxlength="5" value="<%=SAGAC.getGrade()%>">
                     </div>
 
                 </div>
@@ -133,6 +135,7 @@
         </tr>
         <%
             }
+            session.setAttribute("StudentAndGradeAndCourseList",list);
         %>
     </table>
     <div class="modal-footer">
@@ -141,6 +144,7 @@
         </div>
     </div>
 </form>
+
 
 </body>
 </html>

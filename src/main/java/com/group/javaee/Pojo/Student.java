@@ -16,5 +16,4 @@ public class Student {
     private String studentEmail;
     private String studentTel;
     private String studentOrigin;
-
 }

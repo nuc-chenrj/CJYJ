@@ -43,8 +43,8 @@ public class LogController {
             admin.setAdminId(Integer.parseInt(request.getParameter("license")));
             admin.setAdminPassword(request.getParameter("password"));
 
-            System.out.println(admin.getAdminId());
-            System.out.println(admin.getAdminPassword());
+/*            System.out.println(admin.getAdminId());
+            System.out.println(admin.getAdminPassword());*/
             admin = adminMapper.checkAdmin(admin);
 
             if (admin != null) {
@@ -99,6 +99,4 @@ public class LogController {
         request.getSession().invalidate();
         response.setHeader("refresh", "1;URL=index");
     }
-
-
 }

@@ -68,9 +68,8 @@
 
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="/user/myspace/notification/1/">
+                    <a>
                         <span class="glyphicon glyphicon-bell" style="font-size: 20px;"></span>
-
                     </a>
                 </li>
                 <li>

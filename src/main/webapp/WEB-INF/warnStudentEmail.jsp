@@ -5,7 +5,9 @@
 <%@ page import="org.springframework.web.context.support.WebApplicationContextUtils" %>
 <%@ page import="java.util.Set" %>
 <%@ page import="java.util.Iterator" %>
-<%@ page import="com.group.javaee.Mapper.AdminMapper" %><%--
+<%@ page import="com.group.javaee.Mapper.AdminMapper" %>
+<%@ page import="java.util.List" %>
+<%@ page import="com.group.javaee.Pojo.Student" %><%--
   Created by IntelliJ IDEA.
   User: wan14
   Date: 2019/12/22
@@ -78,8 +80,8 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a href="#" data-toggle="modal" data-target="#borrow-modal">学生成绩查询</a></li>
-                        <li><a href="adminSelectClassesGrade">班级成绩查询</a></li>
-                        <li><a href="warnStudent">预警学生查询</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#borrow-modal">班级成绩查询</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#add-modal">预警学生查询</a></li>
                     </ul>
                 </li>
 
@@ -90,7 +92,7 @@
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="AdminCourseSelect">课程查询</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#borrow-modal">课程查询</a></li>
                         <li><a href="#" data-toggle="modal" data-target="#addCourse-modal">课程录入</a></li>
                     </ul>
                 </li>
@@ -99,7 +101,7 @@
 
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a>
+                    <a href="/user/myspace/notification/1/">
                         <span class="glyphicon glyphicon-bell" style="font-size: 20px;"></span>
                     </a>
                 </li>
@@ -182,9 +184,7 @@
                             <span>录入信息</span>
                         </div>
                         <input name="courseName" class="form-control" type="text" placeholder="课程名" maxlength="30">
-
                         <input name="method" class="form-control" type="text" placeholder="考试类型" maxlength="30">
-
                     </div>
 
                     <div class="modal-footer">
@@ -199,8 +199,6 @@
         </div>
     </div>
 </div>
-
-
 <%
     Integer license = Integer.parseInt((String) session.getAttribute("license"));
     ServletContext sc = this.getServletConfig().getServletContext();
@@ -238,8 +236,10 @@
                                maxlength="30" value="<%=admin.getAdminPassword()%>">
                         <input name="adminName" class="form-control" type="text" placeholder="姓名"
                                maxlength="30" value="<%=admin.getAdminName()%>">
-                        <input name="adminTel" class="form-control" type="text" placeholder="电话" maxlength="16" value="<%=admin.getAdminTel()%>" >
-                        <input name="adminEmail" class="form-control" type="email" placeholder="邮箱" maxlength="16"value="<%=admin.getAdminEmail()%>" >
+                        <input name="adminTel" class="form-control" type="tex" placeholder="电话" maxlength="16"
+                               value="<%=admin.getAdminTel()%>">
+                        <input name="adminEmail" class="form-control" type="tex" placeholder="邮箱" maxlength="16"
+                               value="<%=admin.getAdminEmail()%>">
                     </div>
 
                     <div class="modal-footer">
@@ -254,6 +254,60 @@
         </div>
     </div>
 </div>
+
+
+<form action="/sendEmail" method="post">
+    <table border="1" align="center" style="width: 95%">
+        <%
+            List list = (List) request.getAttribute("list");
+            Iterator<Integer> iter = list.iterator();
+            try {
+                while (iter.hasNext()) {
+                    Integer x = iter.next();
+                    Student student = adminMapper.selectStudentById(x);
+        %>
+        <tr>
+            <td>
+                <div class="row">
+                    <div class="col-md-4">
+                        学号: <b><%=student.getStudentId()%>
+                    </b>
+                    </div>
+                    <div class="col-md-6">
+                        姓名: <b><%=student.getStudentName()%>
+                    </b>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        班级: <b><%=student.getStudentClassId()%>
+                    </b>
+                    </div>
+                    <div class="col-md-4">
+                        邮箱:<input name="email" maxlength="30" value="<%=student.getStudentEmail()%>" readonly="readonly">
+                    </b>
+                    </div>
+
+                    <div class="col-md-4">
+                        电话: <b><%=student.getStudentTel()%>
+                    </b>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <%
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        %>
+    </table>
+    <div class="modal-footer">
+        <div>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">发送邮件</button>
+        </div>
+    </div>
+</form>
 
 
 <div class="row center-banner">

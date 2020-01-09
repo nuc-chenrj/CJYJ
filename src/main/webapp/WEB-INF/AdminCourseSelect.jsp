@@ -1,4 +1,7 @@
+<%@ taglib prefix="th" uri="http://jakarta.apache.org/taglibs/standard/permittedTaglibs" %>
 <%@ page import="com.group.javaee.Pojo.Admin" %>
+<%@ page import="com.group.javaee.Pojo.Teacher" %>
+<%@ page import="com.group.javaee.Pojo.Course" %>
 
 <%--
   Created by IntelliJ IDEA.
@@ -10,6 +13,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="baidu-site-verification" content="UW1SBiMHO7"/>
@@ -55,15 +59,38 @@
         <div class="collapse navbar-collapse" id="topNavBar">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="">首页</a></li>
-                <li class=""><a href="adminSelect">管理员查询</a></li>
                 <li>
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        学生成绩管理
+                        教师管理
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="studentResultInput">成绩录入</a></li>
-                        <li><a href="#" data-toggle="modal" data-target="#borrow-modal">成绩查询</a></li>
+                        <li><a href="AdminTeacherSelect">教师查询</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#addTeacher-modal">教师录入</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        学生管理
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" data-toggle="modal" data-target="#borrow-modal">学生成绩查询</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#borrow-modal">班级成绩查询</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#add-modal">预警学生查询</a></li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        课程管理
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" data-toggle="modal" data-target="#borrow-modal">课程查询</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#addCourse-modal">课程录入</a></li>
                     </ul>
                 </li>
                 <li><a href="#" data-toggle="modal" data-target="#update-modal">查看/修改个人信息</a></li>
@@ -86,6 +113,8 @@
                     </ul>
                 </li>
             </ul>
+
+
         </div>
     </div>
 </nav>
@@ -131,21 +160,7 @@
     </div>
 </div>
 
-<%
-    Admin admin = (Admin) request.getAttribute("admin");
-
-    if (admin != null) {
-        System.out.println("yes");
-        System.out.println(admin.getAdminId());
-        System.out.println(admin.getAdminName());
-        System.out.println(admin.getAdminEmail());
-    } else {
-        System.out.println("no");
-        /*System.out.println(teacher.toString());*/
-    }
-
-%>
-<form action="/searchAdmin" method="post">
+<form action="/searchCourse" method="post">
     <input type='hidden' name='csrfmiddlewaretoken'
            value='LkYIEOiULz1W5oDCFmaRRWL1fnniL0YAAPJ577ioIWitoo4zd5AL2BMCFOgUkkEj'/>
     <div>
@@ -158,8 +173,8 @@
             <label style="vertical-align: top">检阅途径：</label>
 
             <select name="searchWay" style="width: 130px;height: 20px; vertical-align: top">
-                <option value="adminId">学工号</option>
-                <option value="adminName">姓名</option>
+                <option value="courseId">课程ID</option>
+                <option value="courseName">课程名</option>
             </select>
 
         </div>
@@ -170,53 +185,48 @@
         </div>
     </div>
 </form>
-
-<%--<table border="1" align="center" style="width: 100%">
-
+<%--
+会爆红，但是可以查询老师
+--%>
+<table border="1" align="center" style="width: 100%">
     <%
-        try {
-            if (admin.getAdminId()!=0) {
+        Course course = (Course) request.getAttribute("course");
+        try{
+            if(course.getCourseId()!=-1){
     %>
     <tr>
         <td>
             <div class="row">
                 <div class="col-md-4">
-                    学工号: <b><%=admin.getAdminId()%>
-                </b>
-                </div>
-                <div class="col-md-6">
-                    姓名: <b><%=admin.getAdminName()%>
-                </b>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    邮箱: <b><%=admin.getAdminEmail()%>
+                    课程ID: <b><%=course.getCourseId()%>
                 </b>
                 </div>
                 <div class="col-md-4">
-                    电话: <b><%=admin.getAdminTel()%>
+                    课程名: <b><%=course.getCourseName()%>
                 </b>
                 </div>
-            </div>
 
+                <div class="col-md-4">
+                    考查方式: <b><%=course.getMethod()%>
+                </b>
+                </div>
+            </div>
         </td>
     </tr>
-
     <%
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
     %>
-</table>--%>
-
+</table>
 
 <div class="row center-banner">
     <div class="col-xs-12 center-banner-title">
     </div>
 </div>
+
+
 <script src="https://cdn.acwing.com/static/web/js/status/click.js"></script>
 </body>
 </html>
-
